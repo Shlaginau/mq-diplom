@@ -150,6 +150,7 @@ body {
   width: 25%;
   display: flex;
   align-items: flex-end;
+  justify-content: center;
   min-height: 320px;
   
   background-repeat: no-repeat;
@@ -182,6 +183,7 @@ body {
 
 .trend-one {
   background-image: url(../images/trend1.jpg);
+  overflow-wrap: break-word;
 }
 
 .trend-two {
@@ -697,11 +699,16 @@ body {
   height: 100%;
   left: 0;
   top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 15px 15px;
+
   background-color: rgba(0, 0, 0, 0.6);
   /*display: flex;*/
   display: none;
   justify-content: center;
   align-items: center;
+  overflow: scroll;
 }
 
 .feedback {

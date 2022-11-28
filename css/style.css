@@ -706,15 +706,13 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
   /*display: flex;*/
   display: none;
-  justify-content: center;
-  align-items: center;
-  overflow: scroll;
 }
 
 .feedback {
+  margin: auto;
   position: relative;
   z-index: 1;
-  background-color: rgb(255, 255, 255); 
+  background-color: rgb(255, 255, 255);
 }
 
 .popup-title {
@@ -1195,3 +1193,14 @@ body {
   }
 }
 
+@media (max-height: 700px) {
+  .feedback {
+    margin-top: 25px;
+    margin-bottom: 5px;
+  }
+
+  .feedback-forms {
+    height: 100%;
+    overflow-y: scroll;
+  }
+}

@@ -2,7 +2,7 @@
 @font-face {
   font-family: "Open Sans";
   src: local("Open Sans"),
-    url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff);
+    url(../Fonts/OpenSans-Regular.woff);
   font-weight: 400;
   font-style: normal;
 }
@@ -10,7 +10,7 @@
 @font-face {
   font-family: "Open Sans";
   src: local("Open Sans"),
-    url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff);
+    url(../Fonts/OpenSans-Bold.woff);
   font-weight: 700;
   font-style: normal;
 }
@@ -46,6 +46,7 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding-top: 30px;
 
   background-image: url(../images/banner-bg.jpg);
   background-repeat: no-repeat;
@@ -76,9 +77,9 @@ body {
   padding: 0 20px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .menu {
@@ -111,8 +112,8 @@ body {
 }
 
 .header-name {
-  margin-top: 130px;
-  margin-bottom: 145px;
+  max-width: 69rem;
+  margin: 130px auto 145px auto;
   text-align: center;
   color: rgb(255, 255, 255);
   font-size: 4.5rem;
@@ -200,8 +201,6 @@ body {
 
 .trend-post {
   width: 100%;
-  display: flex;
-  flex-direction: column;
   margin: 20px;
   padding: 40px 35px 35px;
   border: 3px solid rgb(135, 115, 66);
@@ -228,33 +227,26 @@ body {
 }
 
 .main {
-  width: 100%;
+  width: 65%;
+  margin-right: 12%;
 }
 
 .post {
   display: flex;
-  width: 86%;
 }
 
 .post:not(:last-child) {
   margin-bottom: 60px;
 }
 
-.post-info {
-  display: flex;
-  flex-direction: column;
-  width: 48.75%;
-}
-
 .post-preview {
-  margin: 0 30px 0 0;
-  width: 47.5%;
+  margin: 0 30px 15px 0;
+  width: 100%;
 }
 
 .post-image {
   display: block;
   background-color: rgb(239, 246, 241);
-  width: 100%;
 }
 
 .post-tags {
@@ -265,13 +257,16 @@ body {
   list-style-type: none;
 }
 
+.post-tag:not(:last-child) {
+  padding-right: 20px;
+  }
+
 .main-tag {
   color: rgb(181, 159, 91);
   font-weight: 700;
   font-size: 1.2rem;
   text-transform: uppercase;
-  padding-right: 20px;
-  text-decoration: none;
+  text-decoration: none;  
 }
 
 .main-tag:hover {
@@ -330,7 +325,7 @@ body {
 /* ==================================================== ASIDE */
 
 .category-menu {
-  width: 270px;
+  width: 23%;
 }
 
 .category:not(:last-child) {
@@ -377,8 +372,6 @@ body {
 }
 
 .new-post-info {
-  display: block;
-  width: 180px;
   padding-top: 0;
   margin-top: -5px;
   margin-left: 20px;
@@ -391,8 +384,7 @@ body {
 }
 
 .new-post-title {
-  margin: 0;
-  padding-top: 5px;
+  margin: 5px 0 0;
 }
 
 .new-post-link {
@@ -437,7 +429,7 @@ body {
 .search-button {
   flex-shrink: 0;
   width: 50px;
-  background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/search.svg);
+  background-image: url(../svg/search.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 20px;
@@ -460,6 +452,7 @@ body {
   border: none;
   box-sizing: border-box;
   padding-left: 20px;
+  padding-right: 10px;
   margin: 25px 0 20px 0;
 }
 
@@ -506,9 +499,6 @@ body {
 
 .topics {
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
   list-style-type: none;
 }
 
@@ -911,6 +901,10 @@ body {
     position: absolute;
     left: 0;
   }
+
+  .product:last-child {
+    margin-bottom: 0;
+  }
 }
 
 /* ================================================= TABLET */
@@ -929,6 +923,7 @@ body {
 
   .header-name {
     font-size: 4rem;
+    max-width: 62rem;
   }
 
   .header-logo {
@@ -939,12 +934,34 @@ body {
     padding: 35px 30px;
   } 
 
+  .main {
+    width: 56%;
+    margin-right: 12%;
+  }
+
+  .post {
+    flex-direction: column;
+  }
+
+  .post-image {
+    width: 100%;
+  }
+
   .post-title {
     font-size: 1.7rem;
   }
 
   .post-tags {
     font-size: 1.4rem;
+  }
+
+  .data {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+
+  .category-menu {
+    width: 39%;
   }
 
   .footer-wrapper {
@@ -1006,10 +1023,6 @@ body {
     width: 48%;
     margin-bottom: 30px;
   }
-
-  .product:last-child {
-    margin-bottom: 0;
-  }
 }
 
 /* ================================================== MOBILE */
@@ -1022,34 +1035,31 @@ body {
   }
 
   .header-logo {
-    display: none;
+    width: 270px;
+    align-self: center;
   }
 
   .header-name {
-    display: none;
-  
-    margin: 0;
-    padding-top: 4rem;
-  }
+    width: 28rem;
+    margin-top: 45px;
+    margin-bottom: 220px;
 
-  .mobile-name {
-    text-align: center;
-    margin: 0;
-    padding-top: 4rem;
-
-    color: rgb(255, 255, 255);
     font-size: 2.6rem;
-    font-weight: 700;
-    text-transform: uppercase;
     line-height: 1.38;
   }
 
-  .mobile {
-    min-height: 64rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .header-wrapper {
+    padding-right: 15px;
+    padding-left: 15px;
+    flex-direction: column-reverse;
+  }
+
+  .header-logo {
+    margin-top: 185px;
+  }
+
+  .menu {
+    align-self: flex-end;
   }
 
   .trend-post {
@@ -1064,6 +1074,11 @@ body {
     margin-top: 45px;
   }
 
+  .main {
+    width: 100%;
+    margin-right: 0;
+  }
+
   .post-title {
     font-size: 1.6rem;
   }
@@ -1074,16 +1089,14 @@ body {
 
   .post {
     display: block;
-    width: 100%;
   }
 
   .post:not(:last-child) {
     margin-bottom: 35px;
   }
 
-  .post-preview {
+  .post-image {
     width: 100%;
-    margin-bottom: 15px;
   }
 
   .post-info {

@@ -47,6 +47,7 @@ body {
   display: flex;
   flex-direction: column;
   padding-top: 30px;
+  padding-bottom: 145px;
 
   background-image: url(../images/banner-bg.jpg);
   background-repeat: no-repeat;
@@ -113,7 +114,7 @@ body {
 
 .header-name {
   max-width: 69rem;
-  margin: 130px auto 145px auto;
+  margin: 130px auto 0 auto;
   text-align: center;
   color: rgb(255, 255, 255);
   font-size: 4.5rem;
@@ -258,7 +259,7 @@ body {
 }
 
 .post-tag:not(:last-child) {
-  padding-right: 20px;
+  margin-right: 20px;
   }
 
 .main-tag {
@@ -856,6 +857,8 @@ body {
 @media (max-width: 1199px) {
   .header-wrapper {
     width: 100%;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 
   .menu {
@@ -918,7 +921,9 @@ body {
     display: none}
 
   .header {
-    background-image: url(../images/banner-bg-tablet.jpg)
+    background-image: url(../images/banner-bg-tablet.jpg);
+    padding-top: 50px;
+    padding-bottom: 125px;
   } 
 
   .header-name {
@@ -1032,6 +1037,7 @@ body {
 {
   .header {
     background-image: url(../images/banner-mobile.jpg);
+    padding-bottom: 220px;
   }
 
   .header-logo {
@@ -1042,7 +1048,7 @@ body {
   .header-name {
     width: 28rem;
     margin-top: 45px;
-    margin-bottom: 220px;
+    margin-bottom: 0;
 
     font-size: 2.6rem;
     line-height: 1.38;
